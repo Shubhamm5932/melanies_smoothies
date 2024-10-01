@@ -46,6 +46,9 @@ if ingredients_list:
         session.sql(my_insert_stmt).collect()
         st.success('your smoothie is ordered! ' + name_on_order + '', icon = "✅")
 
-
+#new section to display fruityvice nutrition information.
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
 
 
