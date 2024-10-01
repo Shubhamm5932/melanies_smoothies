@@ -1,5 +1,6 @@
 # Import python packages
 import streamlit as st
+from snowflake.snowpark import Session
 from snowflake.snowpark.functions import col
 
 # Write directly to the app
@@ -10,8 +11,6 @@ st.write(
     
     """
 )
-
-#import streamlit as st
 
 name_on_order = st.text_input('name on smoothie:')
 st.write('the name on your smoothie will be:', name_on_order)
